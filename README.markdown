@@ -24,7 +24,7 @@ Essential files:
 
 - **blazeface.py**: defines the `BlazeFace` class that does all the work
 
-- **blazeface.pth**: the weights for the trained model
+- **blazeface.pth**: the weights for the trained model(this file must be inside a folder called weights)
 
 - **anchors.npy**: lookup table with anchor boxes
 

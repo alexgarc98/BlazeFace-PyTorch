@@ -360,10 +360,10 @@ class BlazeFace(nn.Module):
         w = raw_boxes[..., 2] / self.w_scale * anchors[:, 2]
         h = raw_boxes[..., 3] / self.h_scale * anchors[:, 3]
 
-        boxes[..., 0] = y_center - h / 2.  # ymin
-        boxes[..., 1] = x_center - w / 2.  # xmin
-        boxes[..., 2] = y_center + h / 2.  # ymax
-        boxes[..., 3] = x_center + w / 2.  # xmax
+        boxes[..., 0] = x_center - w / 2.  # ymin
+        boxes[..., 1] = y_center - h / 2.  # xmin
+        boxes[..., 2] = x_center + w / 2.  # ymax
+        boxes[..., 3] = y_center + h / 2.  # xmax
 
         for k in range(6):
             offset = 4 + k*2
